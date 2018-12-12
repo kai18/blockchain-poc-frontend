@@ -1,0 +1,25 @@
+<div *ngIf="car" class = "car-info">
+  <mat-card class="car-info-card">
+    <mat-card-header>
+      <div mat-card-avatar class="car-header-image"></div>
+      <mat-card-title>Company: {{car.company}}</mat-card-title>
+      <mat-card-subtitle>Make and Model: {{car.model}} {{car.modelYear}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class ="car-image" 
+    src="https://drop.ndtv.com/albums/AUTO/tata_evision_electric_sedan_concept_pictures/evision-004.jpg" 
+    alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>Number of Times Sold: {{car.numberOfTimesSold}}</p>
+        <p>
+          Current Owner: {{car.currentOwner}}
+        </p>
+        <p *ngFor="let previousOwner of car.previousOwners">
+          {{previousOwner}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="buyCar()">Buy</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

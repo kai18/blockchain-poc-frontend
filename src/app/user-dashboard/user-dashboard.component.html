@@ -1,0 +1,17 @@
+<mat-card class="dashboard">
+  <mat-card-header>
+    <mat-card-title>Dashboard</mat-card-title>
+    <mat-card-subtitle>User</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h4>Pending Transactions</h4>
+    <p *ngFor="let transaction of transactions | async">
+      <mat-card class = "transaction" *ngIf="!transaction.complete">
+        <p>{{transaction.id}}    {{transaction.vin}}     {{transaction.buyer}}       {{transaction.price}}</p>
+        <p>
+          <button mat-raised-button (click)="confirmTransaction(transaction)">Confirm transaction</button>
+        </p>
+      </mat-card>
+    </p>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,19 @@
+.car-info{
+    width: 100%;
+    height:50%;
+}
+
+.car-info-card{
+    left:20%;
+    right: 20%;
+    width: 50%;
+    height: 70%;
+}
+
+.car-image{
+    width:60%;
+    height: 50%;
+    left: 20%;
+    right: 20%;
+    padding-left: 20%;
+}

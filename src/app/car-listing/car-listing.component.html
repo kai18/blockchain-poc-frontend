@@ -1,0 +1,27 @@
+
+<div class="listing">
+    <mat-grid-list cols = "3" rowHeight = "4:5">
+        <mat-grid-tile *ngFor="let car of cars">
+            <mat-card  class="car-info-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="car-header-image"></div>
+                    <mat-card-title>Car Make and Model: {{car.model}} {{car.modelYear}}</mat-card-title>
+                    <mat-card-subtitle>Company: {{car.company}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image class ="car-image" src="https://drop.ndtv.com/albums/AUTO/tata_evision_electric_sedan_concept_pictures/evision-004.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <!--  <p>
+                        Number of times sold: {{car.numberOfTimesSold}}
+                    </p>
+                    <p>
+                        Current Owner: {{car.currentOwner}}
+                    </p>-->
+                </mat-card-content>
+                <mat-card-actions>
+                    <button (click)="viewCar(car.vin)" mat-button>View</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

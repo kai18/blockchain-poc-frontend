@@ -1,0 +1,17 @@
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <textarea matInput formControlName="vin" placeholder="Vin"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput formControlName="seller" placeholder="Seller"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput formControlName="buyer" placeholder="Buyer"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput formControlName="price" placeholder="Price"></textarea>
+    </mat-form-field>
+    <p>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </p>
+</form>

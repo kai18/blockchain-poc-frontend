@@ -1,0 +1,49 @@
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="carInformationFormGroup">
+    <form (ngSubmit)="onSubmit()" [formGroup]="carInformationFormGroup">
+      <ng-template matStepLabel>Fill out Car Details</ng-template>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Car Vin" formControlName="vin" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Car Model" formControlName="model" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Company" formControlName="company" required>
+        </mat-form-field>
+      </p>
+      <p>
+          <mat-form-field>
+            <input matInput placeholder="Color" formControlName="color" required>
+          </mat-form-field>
+        </p>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Car Current Owner" formControlName="currentOwner" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input matInput placeholder="Car Model Year" formControlName="modelYear" required>
+        </mat-form-field>
+      </p>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+
+      </div>
+    </mat-step>
+</mat-vertical-stepper>
